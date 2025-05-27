@@ -122,7 +122,6 @@ const SignUp = () => {
       <div className="social-login">
         <p>Or sign up with</p>
         <GoogleLogin
-          clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}
           onSuccess={handleGoogleSuccess}
           onError={() => setError('Google sign-up failed')}
           theme= "filled_blue"

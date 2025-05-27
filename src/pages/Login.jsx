@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import api from '../services/api'
-import './login.css';
+import './Login.css';
 import { useNavigate } from 'react-router-dom';
 import { GoogleLogin } from '@react-oauth/google';
 
@@ -27,7 +27,12 @@ const Login = () => {
 
       //save token and user info to localStorage
       localStorage.setItem('token', res.data.token);
-      localStorage.setItem('user', JSON.stringify(res.data.user));
+
+      //fetch complete user profile
+      const me = await api.get('/users/me' , {
+        headers: { Authorization: `Bearer ${res.data.token}`}
+      })
+      localStorage.setItem('user', JSON.stringify(me.data));
       setMessage('Login successful!');
       //redirect to dashboard
       setTimeout(()=> navigate('/dashboard'), 1500 );
@@ -46,7 +51,12 @@ const handleGoogleSuccess = async (credentialResponse) => {
     const res = await api.post('/users/google-login', { token: credentialResponse.credential });
     console.log('Google Login: Response data:', res.data)
     localStorage.setItem('token', res.data.token);
-    localStorage.setItem('user' , JSON.stringify(res.data.user));
+
+    //fetch complete user profile
+    const me = await api.get('/users/me', {
+      headers: { Authorization:  `Bearer ${res.data.token}`}
+    })
+    localStorage.setItem('user' , JSON.stringify(me.data));
     setMessage( 'Google login successful!');
     setTimeout(() => navigate('/dashboard'), 1500);
   } catch (err) {
@@ -94,6 +104,7 @@ const handleGoogleSuccess = async (credentialResponse) => {
           onError={()=> setError('Google login failed')}
           theme='filled_blue'
           size='large'
+          useOneTap
         />
       </div>
 
