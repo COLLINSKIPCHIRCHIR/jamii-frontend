@@ -1,0 +1,38 @@
+.homepage {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 8px var(--shadow);
+  transition: background-color 0.3s ease;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.categories-section h2 {
+  display: flex;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  justify-content: center;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}

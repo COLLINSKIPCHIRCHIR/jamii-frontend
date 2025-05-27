@@ -1,0 +1,65 @@
+/* Define global CSS variables */
+:root {
+  --bg: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text: #1f2937;
+  --text-secondary: #4b5563;
+  --border: #d1d5db;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --button-bg: #2563eb;
+  --button-hover: #1e40af;
+  --input-bg: #fff;
+  --dropdown-bg: #fff;
+  --dropdown-hover: #f9fafb;
+  --error: #ef4444;
+  --success: #10b981;
+  /*ligt*/
+  --bg-card: #ffffff;
+  --bg-page: #f9fafb;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --accent: #2563eb;
+  --accent-hover: #1e40af;
+  --danger: #ef4444;
+}
+
+[data-theme="dark"] {
+  --bg: #1f2937;
+  --bg-secondary: #111827;
+  --text: #f9fafb;
+  --text-secondary: #d1d5db;
+  --border: #374151;
+  --shadow: rgba(0, 0, 0, 0.2);
+  --button-bg: #3b82f6;
+  --button-hover: #2563eb;
+  --input-bg: #374151;
+  --dropdown-bg: #374151;
+  --dropdown-hover: #4b5563;
+  --error: #f87171;
+  --success: #34d399;
+  --bg-card: #1f2937;
+  --bg-page: #111827;
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+  --accent: #60a5fa;
+  --accent-hover: #3b82f6;
+  --danger: #f87171;
+
+}
+
+/* Apply global styles */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+}
+
+a {
+  color: var(--button-bg);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--button-hover);
+}

@@ -1,0 +1,52 @@
+Folder PATH listing
+Volume serial number is 3073-3D43
+C:.
+|   App.css
+|   App.jsx
+|   folder-tree.txt
+|   index.css
+|   main.jsx
+|   
++---assets
+|       react.svg
+|       
++---components
+|   |   productCard.css
+|   |   ProductCard.jsx
+|   |   SearchResults.jsx
+|   |   
+|   +---Categories
+|   |       Categories.css
+|   |       Categories.jsx
+|   |       
+|   +---collections
+|   |       Collections.css
+|   |       Collections.jsx
+|   |       
+|   +---Navbar
+|   |       Navbar.css
+|   |       Navbar.jsx
+|   |       
+|   \---SearchBar
+|           SearchBar.css
+|           SearchBar.jsx
+|           
++---pages
+|       Chats.jsx
+|       ChatView.jsx
+|       Dashboard.css
+|       Dashboard.jsx
+|       Home.css
+|       Home.jsx
+|       Login.css
+|       Login.jsx
+|       postAd.css
+|       PostAd.jsx
+|       productDetails.css
+|       ProductDetails.jsx
+|       signUp.css
+|       SignUp.jsx
+|       
+\---services
+        api.js
+        

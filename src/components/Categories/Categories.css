@@ -1,0 +1,82 @@
+.categories-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.category-item {
+  background: var(--bg-secondary);
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+  color: var(--text-primary);
+}
+
+.category-item:hover { background: var(--bg-card); }
+
+.category-page {
+  padding: 20px;
+  color: var(--text-primary);
+}
+
+.category-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filter-input,
+.filter-select {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  width: 200px;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: var(--accent-hover);
+}
+
+.pagination button:disabled {
+  background-color: var(--border);
+  cursor: not-allowed;
+}
