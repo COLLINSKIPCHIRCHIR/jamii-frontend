@@ -130,19 +130,42 @@
 
 /* ── Mobile tweaks ───────────────────────────── */
 @media (max-width: 600px) {
+  .footer{
+    padding: 2rem 1rem 1rem;
+  }
   .footer-container {
     text-align: center;
+    gap: 2rem;
   }
 
   .footer-section {
     align-items: center;
+    gap: 0.5rem;
   }
 
   .footer-links {
+    font-size: 0.9rem;
     align-items: center;
+    gap: 0.4rem;
   }
 
   .footer-socials {
     justify-content: center;
+  }
+
+  .footer-socials a {
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1rem;
+  }
+
+
+  .footer-logo {
+    font-size: 1.5rem;
+  }
+  .footer-bottom {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    font-size: 0.8rem;
   }
 }
