@@ -17,7 +17,6 @@ return (
         <p>Find great deals near you or post your own items for sale!</p>
     </section>
     <section className='categories-section'>
-        <h2>Browse Categories</h2>
         < Collections />
     </section>
     </div>
