@@ -5,6 +5,9 @@ import { FaHome } from 'react-icons/fa'
 import { FiLogIn, FiUserPlus, FiPlusCircle, FiX, FiMenu, FiSettings, FiLogOut, FiSun , FiMoon, FiBell} from 'react-icons/fi'
 import api from '../../services/api'
 
+//base URL Axios instance uses
+const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
 
 const Navbar = () => {
 
@@ -115,8 +118,8 @@ useEffect(() => {
     const buildImg = (file) => {
         if (!file || file.trim() === "") return null;
         if (file.startsWith("http")) return file;
-        if (file.startsWith("/uploads")) return `http://localhost:5000${file}`;
-        return `http://localhost:5000/uploads/${file}`;
+        if (file.startsWith("/uploads")) return `${baseURL}${file}`;
+        return `${baseURL}${file}`;
     }
 
 

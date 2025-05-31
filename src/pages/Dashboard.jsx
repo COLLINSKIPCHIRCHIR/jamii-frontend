@@ -2,6 +2,7 @@ import React, { useEffect, useState} from 'react'
 import './Dashboard.css'
 import { useNavigate } from 'react-router-dom'
 import api from '../services/api'
+const baseURL = import.meta.env.VITE_API_URL
 
 const Dashboard = () => {
   //state to hold the ads fetched from backend
@@ -23,7 +24,18 @@ const Dashboard = () => {
   
   const navigate = useNavigate();
 
-  //run when the component loads
+  //clear profile messages after 5 seconds
+  useEffect(() => {
+    if (profileMessage || profileError) {
+      const timer = setTimeout(() => {
+        setProfileMessage('');
+        setProfileError('');
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [profileMessage, profileError])
+
+  //Fetch user, ads, and chats on mount
   useEffect(() => {
     const fetchData = async () => {
       const token = localStorage.getItem('token');
@@ -213,7 +225,9 @@ const Dashboard = () => {
             <img src={previewUrl} alt= 'Profile Preview'
             className='profile-pic' />
           ) : profilePic ? (
-            <img src={`http://localhost:5000${profilePic}`} alt='Profile'
+            <img 
+            src={`${baseURL}${profilePic}`} 
+            alt={`${user?.name || 'User'}'s profile`}
             className='profile-pic' />
           ) : (
             <div className="profile-pic-placeholder">

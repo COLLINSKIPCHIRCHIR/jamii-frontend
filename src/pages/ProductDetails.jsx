@@ -2,6 +2,8 @@ import React,{ useEffect, useState } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import api from '../services/api';
 import './productDetails.css'
+const baseURL = import.meta.env.VITE_API_URL;
+
 
 
 
@@ -126,7 +128,7 @@ const isSeller = currentUser && product?.createdBy && currentUser._id === produc
               ◀
             </button>
             <img
-              src={`http://localhost:5000${product.images[currentImageIndex]}`}
+              src={`${baseURL}${product.images[currentImageIndex]}`}
               alt="Product"
               className="product-image"
             />
@@ -142,7 +144,7 @@ const isSeller = currentUser && product?.createdBy && currentUser._id === produc
             img && (
             <img
             key={index}
-            src={`http://localhost:5000${img}`}
+            src={`${baseURL}${img}`}
             alt={`Thumbnail ${index}`}
             className={`thumbnail ${index === currentImageIndex ?
               'active' : ''

@@ -1,6 +1,6 @@
 import React, {useEffect, useState } from 'react'
 import './Categories.css'
-import axios from 'axios'
+import api from '../../services/api'
 import { useParams } from 'react-router-dom'
 import ProductCard from '../ProductCard'
 
@@ -19,7 +19,7 @@ function CategoryPage() {
     const fetchByCategory = async () => {
       setLoading(true);
       try {
-        const res = await axios.get(`http://localhost:5000/api/products`, {
+        const res = await api.get('/products', {
           params: {
             search: searchTerm,
             sort: sort === 'low' ? 'price_asc' : sort === 'high' ? 'price_desc' : '',

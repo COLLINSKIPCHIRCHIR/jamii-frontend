@@ -2,6 +2,7 @@ import React, {useState, useRef, useEffect} from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import api from '../services/api'
 import './postAd.css';
+const baseURL = import.meta.env.VITE_API_URL;
 
 const PostAd = () => {
   const navigate = useNavigate();
@@ -160,7 +161,7 @@ const PostAd = () => {
         </label>
         {uploading && <p>uploading...</p>}
         {form.images && form.images.map((image, index) => (
-        image && <img key={index} src={`http://localhost:5000${image}`} alt='Uploaded' style={{ width:'100px',marginTop:'10px'}}/>))}
+        image && <img key={index} src={`${baseURL}${image}`} alt='Uploaded' style={{ width:'100px',marginTop:'10px'}}/>))}
         <label>
           Category
           <input

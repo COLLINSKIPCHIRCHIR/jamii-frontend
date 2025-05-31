@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import api from '../services/api';
 
 const Chats = () => {
   const [conversations, setConversations] = useState([]);
@@ -20,7 +20,7 @@ useEffect(()=> {
     const fetchConversations = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('/api/chat/conversations', {
+        const res = await api.get('/api/chat/conversations', {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -49,13 +49,13 @@ useEffect(()=> {
     setSelectedChat(chatId);
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get(`/api/chat/${chatId}/messages`, {
+      const res = await api.get(`/api/chat/${chatId}/messages`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setMessages(res.data);
 
       //mark messages as read
-      await axios.post(`/api/chat/${chatId}/mark-read`, {},{
+      await api.post(`/api/chat/${chatId}/mark-read`, {},{
         headers: { Authorization: `Bearer ${token}`}
       });
     } catch (error) {
@@ -70,7 +70,7 @@ useEffect(()=> {
 
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.post(
+      const res = await api.post(
         `/api/chat/${selectedChat}/messages`,
         { text: trimmed },
         { headers: { Authorization:   `Bearer ${token}`}}
