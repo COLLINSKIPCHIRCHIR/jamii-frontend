@@ -13,7 +13,7 @@ const Collections = () => {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const res = await api.get('${baseURL}/api/categories/allCategories')
+                const res = await api.get('/api/categories/allCategories')
                 setCategories(res.data);
             } catch (err) {
                 console.error ('Error fetching categories:', err)
