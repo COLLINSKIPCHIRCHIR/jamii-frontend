@@ -14,6 +14,8 @@ const api = axios.create({
     withCredentials: true
 });
 
+console.log('VITE_API_URL:', import.meta.env.VITE_API_URL);
+
 console.log('[Axios] baseURL =', api.defaults.baseURL);
 
 console.log('[Axios] VITE_API_URL =', baseURL);

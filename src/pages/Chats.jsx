@@ -20,7 +20,7 @@ useEffect(()=> {
     const fetchConversations = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await api.get('/api/chat/conversations', {
+        const res = await api.get('/chat/conversations', {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -49,13 +49,13 @@ useEffect(()=> {
     setSelectedChat(chatId);
     try {
       const token = localStorage.getItem('token');
-      const res = await api.get(`/api/chat/${chatId}/messages`, {
+      const res = await api.get(`/chat/${chatId}/messages`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setMessages(res.data);
 
       //mark messages as read
-      await api.post(`/api/chat/${chatId}/mark-read`, {},{
+      await api.post(`/chat/${chatId}/mark-read`, {},{
         headers: { Authorization: `Bearer ${token}`}
       });
     } catch (error) {
@@ -71,7 +71,7 @@ useEffect(()=> {
     try {
       const token = localStorage.getItem('token');
       const res = await api.post(
-        `/api/chat/${selectedChat}/messages`,
+        `/chat/${selectedChat}/messages`,
         { text: trimmed },
         { headers: { Authorization:   `Bearer ${token}`}}
       );

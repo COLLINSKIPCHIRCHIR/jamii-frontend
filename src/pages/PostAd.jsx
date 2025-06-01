@@ -25,7 +25,7 @@ const PostAd = () => {
     const fetchAd = async () =>{
       if (!adId) return;
       try {
-        const {data} = await api.get(`/api/ads/${adId}`,{
+        const {data} = await api.get(`/ads/${adId}`,{
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`
           }
