@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Electronics",
+    "subCategories": ["Phones", "Computers & Tablets", "TV / Audio", "Cameras"]
+  },
+  {
+    "name": "Vehicles",
+    "subCategories": ["Cars", "Motorbikes", "Trucks & Buses", "Parts & Accessories"]
+  },
+  {
+    "name": "Home & Living",
+    "subCategories": ["Furniture","Kitchen & Dining","Home Appliances","Décor & Lighting"]
+  },
+  {
+    "name": "Fashion",
+    "subCategories": ["Men’s Fashion", "Women’s Fashion", "Kids", "Accessories"]
+  },
+  {
+    "name": "Jobs",
+    "subCategories": ["Full-Time", "Part-Time", "Internships", "Consultancy"]
+  }
+]

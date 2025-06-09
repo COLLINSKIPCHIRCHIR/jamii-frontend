@@ -1,94 +1,171 @@
-/* ───────────  POST AD  ─────────── */
+/* ─────────────────────────────────────────────
+   POST-AD  │  works with the global variables
+   ──────────────────────────────────────────── */
 
 .postad-container {
-  max-width: 640px;
-  margin: 40px auto;
-  padding: 32px;
-  border-radius: 12px;
+  width: min(100%, 720px);
+  margin: 3rem auto;
+  padding: 2.5rem;
+  border-radius: 1rem;
   background: var(--bg-card);
-  box-shadow: 0 6px 16px var(--shadow);
   color: var(--text-primary);
-  transition: background 0.3s ease, color 0.3s ease;
+  box-shadow: 0 8px 24px var(--shadow);
+  animation: slideFade 0.6s cubic-bezier(.25,.8,.25,1);
+  transition: background .3s, color .3s;
+}
+
+@keyframes slideFade {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0);   }
 }
 
 .postad-container h2 {
+  font-size: clamp(1.6rem, 2vw + 1rem, 2.1rem);
   text-align: center;
-  margin-bottom: 24px;
-  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.postad-container h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: .75rem auto 0;
+  background: var(--accent);
+  border-radius: 999px;
+  opacity: .85;
+  animation: growBar .8s ease-out;
+}
+
+@keyframes growBar { from { width: 0; } to { width: 60px; } }
+
+/* ───── FORM GRID ───── */
+.postad-form {
+  display: grid;
+  gap: 1.4rem;
+}
+
+@media (min-width: 640px) {
+  .postad-form.two-col {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+  /* any label with class .full spans both columns */
+  .postad-form .full { grid-column: 1 / 3; }
 }
 
 .postad-form label {
-  display: block;
-  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
   font-weight: 600;
-  color: var(--text-primary);
+  gap: .5rem;
 }
 
 .postad-form input,
+.postad-form select,
 .postad-form textarea {
   width: 100%;
-  padding: 12px 14px;
-  margin-top: 6px;
-  border-radius: 8px;
+  padding: .75rem 1rem;
   border: 1px solid var(--border);
+  border-radius: .625rem;
   background: var(--input-bg);
   color: var(--text-primary);
   font-size: 1rem;
-  transition: border-color 0.25s, box-shadow 0.25s;
-  box-sizing: border-box;
+  transition: border-color .25s, box-shadow .25s;
 }
 
 .postad-form textarea { resize: vertical; min-height: 120px; }
 
 .postad-form input:focus,
+.postad-form select:focus,
 .postad-form textarea:focus {
   outline: none;
   border-color: var(--accent);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent);
 }
 
-.postad-form button {
-  width: 100%;
-  padding: 14px;
-  margin-top: 24px;
+/* ───── IMAGE PREVIEW ───── */
+.image-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
+.image-wrapper {
+  position: relative;
+  animation: fadeInScale .4s ease;
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(.9); }
+  to   { opacity: 1; transform: scale(1);  }
+}
+
+.image-wrapper img {
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: .5rem;
+  box-shadow: 0 3px 6px var(--shadow);
+}
+
+.image-wrapper button {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 22px;
+  height: 22px;
   border: none;
-  border-radius: 8px;
-  background: var(--accent);
+  border-radius: 50%;
+  background: var(--danger);
   color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: transform .25s;
+}
+
+.image-wrapper button:hover { transform: rotate(90deg) scale(1.05); }
+
+/* ───── SUBMIT BUTTON ───── */
+.postad-form button[type="submit"] {
+  grid-column: 1 / -1;
+  padding: .9rem 1rem;
+  border: none;
+  border-radius: .75rem;
   font-size: 1.05rem;
   font-weight: 700;
+  background: var(--accent);
+  color: #fff;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background .3s, transform .2s;
 }
 
-.postad-form button:hover:not(:disabled) { background: var(--accent-hover); }
-.postad-form button:disabled           { background: var(--border); cursor: not-allowed; }
+.postad-form button:hover:not(:disabled)  { background: var(--accent-hover); transform: translateY(-2px); }
+.postad-form button:disabled              { background: var(--border); cursor: not-allowed; }
 
-.postad-form input[type="file"] {
-  border: none;
-  padding-left: 0;
-  color: var(--text-secondary);
-}
-
-.postad-form img {
-  display: block;
-  width: 100px;
-  margin-top: 10px;
-  border-radius: 8px;
-  object-fit: cover;
-  filter: drop-shadow(0 2px 4px var(--shadow));
-}
-
+/* ───── ERROR BANNER ───── */
 .error {
+  grid-column: 1 / -1;
+  text-align: center;
   color: var(--danger);
   font-weight: 600;
-  margin-bottom: 16px;
-  text-align: center;
+  padding: .75rem;
+  border: 1px solid var(--danger);
+  border-radius: .5rem;
+  background: color-mix(in srgb, var(--danger) 5%, transparent);
+  animation: pulse .8s ease-in-out infinite alternate;
 }
 
-/* ───── Responsive ───── */
-@media (max-width: 500px) {
-  .postad-container { padding: 24px 20px; }
-  .postad-container h2 { font-size: 1.5rem; }
-  .postad-form button { font-size: 1rem; }
+@keyframes pulse {
+  from { transform: scale(.98); }
+  to   { transform: scale(1.01); }
+}
+
+/* ───── RESPONSIVE TWEAKS ───── */
+@media (max-width: 480px) {
+  .postad-container { padding: 1.8rem 1.4rem; }
+  .image-wrapper img { width: 80px; height: 64px; }
 }

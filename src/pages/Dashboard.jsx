@@ -44,6 +44,7 @@ const Dashboard = () => {
         const userResponse = await api.get('/users/me',{
           headers: { Authorization: `Bearer ${token}`}
         });
+        console.log("Fetched user data:", userResponse.data);
         setUser(userResponse.data);
         setProfilePic(
           userResponse.data.profilepic?.trim()
@@ -55,17 +56,19 @@ const Dashboard = () => {
         const adsResponse = await api.get('ads/mine', {
           headers: { Authorization: `Bearer ${token}`},
         });
+        console.log("Fetched ads:" , adsResponse.data);
         setAds(adsResponse.data);
 
         //get chats
         const chatsRes = await api.get('/chat/conversations', {
           headers: { Authorization: `Bearer ${token}`},
         });
+        console.log("Fetched chats:", chatsRes.data);
         setChats(chatsRes.data);
       } catch (error) {
        console.error('Dashboard error:', error.response?.data, error.message);
        setProfileError(
-        error.response?.data?.message || 'FAiled to load dashboard data'
+        error.response?.data?.message || 'Failed to load dashboard data'
        ); 
        if (error.response?.status === 401) {
         localStorage.removeItem('token');
@@ -126,6 +129,7 @@ const Dashboard = () => {
           'Content-Type': 'multipart/form-data'
         },
       });
+      console.log("Selected file for profile update:", selectedFile);
       setProfilePic(res.data.profilepic.trim() ? `/uploads/${res.data.profilepic}` : '');
       setProfileMessage(res.data.message);
       setSelectedFile(null);
@@ -289,7 +293,7 @@ const Dashboard = () => {
           {loading ? (
             <p>Loading...</p>
           ) : ads.length === 0 ? (
-            <p>You have no ads yet.</p>
+            <p>You haven't posted any ads yet. Click "Post Item" to get started!.</p>
           ) : (
             <>
               {filteredAds.length === 0 ? (
@@ -301,9 +305,13 @@ const Dashboard = () => {
                         {ad.images && ad.images[0] && typeof ad.images[0] ===
                         'string' && ad.images[0].trim() !== '' ? ( 
                           <img 
-                            src={`http://localhost:5000${ad.images[0]}`} 
+                            src={`${baseURL}${ad.images[0]}`} 
                             alt={ad.name}  
                             className='ad-image' 
+                            onError={(e) => {
+                              e.target.onerror = null;
+                              e.target.src = "/placeholder.jpg";
+                            }}
                           />
                         ) : (
                           <img 

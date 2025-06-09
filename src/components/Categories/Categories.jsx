@@ -1,8 +1,9 @@
 import React, {useEffect, useState } from 'react'
 import './Categories.css'
 import api from '../../services/api'
-import { useParams } from 'react-router-dom'
+import { useParams, useLocation } from 'react-router-dom'
 import ProductCard from '../ProductCard'
+import { useDebounce } from 'use-debounce'
 
 function CategoryPage() {
 
@@ -15,17 +16,29 @@ function CategoryPage() {
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
 
+    const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const sub = queryParams.get('sub');
+
+    const [debouncedSearch] = useDebounce(searchTerm, 300);
+
+    useEffect(()=> {
+      setPage(1);
+      setSearchTerm('');
+    }, [category, sub]);
+
     useEffect (() =>{
     const fetchByCategory = async () => {
       setLoading(true);
       try {
         const res = await api.get('/products', {
           params: {
-            search: searchTerm,
+            search: debouncedSearch,
             sort: sort === 'low' ? 'price_asc' : sort === 'high' ? 'price_desc' : '',
             category,
+            subcategory: sub,
             page,
-            limit: 6
+            limit: 16
           }
         });
         setProducts(res.data.products);
@@ -40,7 +53,19 @@ function CategoryPage() {
     };
 
     fetchByCategory();
-  }, [category, searchTerm, sort, page]);
+  }, [category, sub, searchTerm, sort, page]);
+
+  useEffect(() => {
+    window.scrollTo({top: 0, behavior: 'smooth'})
+  }, [category, sub, page]);
+
+  useEffect(() => {
+    document.title = sub
+    ? `${sub} - ${category} | Marketplace`
+    : `${category} Products | Marketplace`;
+  }, [category, sub]);
+
+  const cap = (s = '') => s.charAt(0).toUpperCase() + s.slice(1);
 
   const handlePrevPage = () => {
     setPage((prev) => Math.max(prev -1, 1))
@@ -50,17 +75,15 @@ function CategoryPage() {
     setPage((prev) => Math.min(prev + 1, totalPages))
   };
 
-    const filteredProducts = products
-        .filter(p => p.name.toLowerCase().includes(searchTerm.toLowerCase()))
-        .sort((a, b) => {
-          if (sort === 'low') return a.price - b.price;
-          if (sort === 'high') return b.price - a.price;
-          return 0;
-        })
+    const sortedProducts = [...products].sort((a,b) =>{
+      if (sort === 'low') return a.price - b.price;
+      if (sort === 'high') return b.price - a.price;
+      return 0;
+    })
 
   return (
     <div className="category-page">
-      <h2>{category.charAt(0).toUpperCase() + category.slice(1)} Products</h2>
+      <h2>{cap(category)}{sub && ` > ${cap(sub)}`}</h2>
         
       <div className='filters'>
         <input
@@ -90,12 +113,12 @@ function CategoryPage() {
               <p>Loading products...</p>
             ) : error ? (
               <p>{error}</p>
-            ) : filteredProducts.length === 0 ? (
+            ) : sortedProducts.length === 0 ? (
               <p>No products found in this category.</p>
             ) : (
             <>
               <div className="product-list">
-                {filteredProducts.map((item) => (
+                {sortedProducts.map((item) => (
                   <ProductCard
                     key={item._id}
                     _id={item._id}

@@ -21,7 +21,7 @@ const SearchResults = () => {
       setError(null);
 
       try {
-        const response = await axios.get(`${baseURL}/api/products?search=${query}`);
+        const response = await api.get(`/products?search=${query}`);
         const products = response.data?.products;
 
         if (Array.isArray(products)) {

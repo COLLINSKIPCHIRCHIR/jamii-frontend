@@ -1,0 +1,2390 @@
+
+[
+  {
+    "county": "Baringo",
+    "capital": "Kabarnet",
+    "code": 30,
+    "subCounties": [
+      {
+        "name": "Baringo central",
+        "wards": [
+          { "name": "Kabarnet", "locations": ["Kabarnet Town", "Kasoiyo", "Kapkut"] },
+          { "name": "Sacho", "locations": ["Sacho Centre", "Seretunin", "Cheberen"] },
+          { "name": "Tenges",  "locations": ["Tenges Town", "Lemook", "Kapkures"] },
+          { "name": "Ewalel/Chapchap",  "locations": ["Ewalel", "Chapchap", "Cheptoroi"] },
+          { "name": "Kapropita", "locations": ["Kapropita Centre", "Keturwo", "Karbanet"] }
+        ]
+      },
+      {
+        "name": "Baringo north",
+        "wards": [
+          {
+          "name": "Kabartonjo",
+          "locations": ["Kabartonjo Town", "Kapcherop", "Koibatek"]
+        },
+        {
+          "name": "Churo",
+          "locations": ["Churo Town", "Kiwawa", "Churo Hills"]
+        },
+        {
+          "name": "Kapkuikui",
+          "locations": ["Kapkuikui Centre", "Loruko", "Kiserian"]
+        },
+        {
+          "name": "Moiben",
+          "locations": ["Moiben Centre", "Kakimiti", "Chepareria"]
+        },
+        {
+          "name": "Nyangores",
+          "locations": ["Nyangores Centre", "Kapcherop", "Kampi Ya Moto"]
+        }
+        ]
+      },
+      {
+        "name": "Baringo south",
+        "wards": [
+          {
+          "name": "Mogotio",
+          "locations": ["Mogotio Town", "Kabartonjo", "Koibatek"]
+        },
+        {
+          "name": "Tenges",
+          "locations": ["Tenges Centre", "Kapkuikui", "Koibatek"]
+        },
+        {
+          "name": "Kabarnet East",
+          "locations": ["Kabarnet Town", "Tenges", "Koibatek"]
+        },
+        {
+          "name": "Kabarnet West",
+          "locations": ["Kabarnet Town", "Mumberes", "Churo"]
+        },
+        {
+          "name": "Ewalel/Chapchap",
+          "locations": ["Chapchap", "Ewalel", "Kapluk"]
+        }
+        ]
+      },
+      {
+        "name": "Eldama ravine",
+        "wards": [
+          {
+          "name": "Sacho",
+          "locations": ["Sacho Town", "Chepkemo", "Sacho Mission"]
+        },
+        {
+          "name": "Lembus/Perkera",
+          "locations": ["Lembus Town", "Perkera", "Kapkures"]
+        },
+        {
+          "name": "Tirioko",
+          "locations": ["Tirioko Centre", "Nkabusi", "Kapcherop"]
+        },
+        {
+          "name": "Riwo",
+          "locations": ["Riwo", "Kapkatet", "Kimugul"]
+        },
+        {
+          "name": "Chesoi",
+          "locations": ["Chesoi", "Nakuru", "Kipreres"]
+        }
+
+        ]
+      },
+      {
+        "name": "Mogotio",
+        "wards": [
+          {
+          "name": "Kiserian",
+          "locations": ["Kiserian Town", "Kapkures", "Kositei"]
+        },
+        {
+          "name": "Sacho",
+          "locations": ["Sacho Centre", "Kapkechui", "Chepkemo"]
+        },
+        {
+          "name": "Tenges",
+          "locations": ["Tenges Town", "Kapchorgot", "Kapyego"]
+        },
+        {
+          "name": "Chepkorio",
+          "locations": ["Chepkorio", "Kabarnet", "Kaporon"]
+        },
+        {
+          "name": "Mogotio Central",
+          "locations": ["Mogotio Town", "Kiptarok", "Kapmurut"]
+        }
+        ]
+      },
+      {
+        "name": "Tiaty",
+        "wards": [
+          {
+          "name": "Chepkemel",
+          "locations": ["Chepkemel", "Koibatek", "Kabartonjo"]
+        },
+        {
+          "name": "Tirioko",
+          "locations": ["Tirioko", "Kaputiei", "Sabor"]
+        },
+        {
+          "name": "Kipkaner",
+          "locations": ["Kipkaner", "Sirei", "Kabwareng"]
+        },
+        {
+          "name": "Nginyang",
+          "locations": ["Nginyang", "Loropil", "Kapng'etuny"]
+        },
+        {
+          "name": "Ribkwo",
+          "locations": ["Ribkwo", "Chebororwa", "Londiani"]
+        }
+        ]
+      }
+    ]
+  },
+  {
+    "county": "Bomet",
+    "capital": "Bomet",
+    "code": 36,
+    "subCounties": [
+      {
+        "name": "Bomet central",
+        "wards": [
+          {
+          "name": "Silibwet",
+          "locations": ["Silibwet", "Kobunde", "Ndanai"]
+        },
+        {
+          "name": "Mutarakwa",
+          "locations": ["Mutarakwa", "Sigor", "Kong'ut"]
+        },
+        {
+          "name": "Chebunyo",
+          "locations": ["Chebunyo", "Mepukori", "Bomet East"]
+        },
+        {
+          "name": "Siongiroi",
+          "locations": ["Siongiroi", "Kapsoya", "Kimumu"]
+        },
+        {
+          "name": "Bomet Central",
+          "locations": ["Bomet Town", "Kipsigis", "Chemosit"]
+        }
+        ]
+      },
+      {
+        "name": "Bomet east",
+        "wards": [
+          {
+          "name": "Chebunyo",
+          "locations": ["Chebunyo", "Bomet East", "Mepukori"]
+        },
+        {
+          "name": "Siongiroi",
+          "locations": ["Siongiroi", "Kimumu", "Kapsoya"]
+        },
+        {
+          "name": "Chemaner",
+          "locations": ["Chemaner", "Kapsore", "Kipsonoi"]
+        },
+        {
+          "name": "Kong'ut",
+          "locations": ["Kong'ut", "Kiptagich", "Sigor"]
+        },
+        {
+          "name": "Bomet East",
+          "locations": ["Bomet Town East", "Chemosit", "Kapsoya"]
+        }
+        ]
+      },
+      {
+        "name": "Chepalungu",
+        "wards": [
+          {
+          "name": "Chebunyo",
+          "locations": ["Chebunyo", "Chesoen", "Kaplelartet"]
+        },
+        {
+          "name": "Kaplelartet",
+          "locations": ["Kaplelartet", "Kipreres", "Kapyego"]
+        },
+        {
+          "name": "Siongiroi",
+          "locations": ["Siongiroi", "Chemosit", "Mogonga"]
+        },
+        {
+          "name": "Kong'ut",
+          "locations": ["Kong'ut", "Sigor", "Kipsonoi"]
+        },
+        {
+          "name": "Ndanai",
+          "locations": ["Ndanai", "Kiptagich", "Chebunyo"]
+        }
+        ]
+      },
+      {
+        "name": "Konoin",
+        "wards": [
+          {
+          "name": "Cheboin",
+          "locations": ["Cheboin", "Kapletundo", "Sosiot"]
+        },
+        {
+          "name": "Kedowa/Kimugul",
+          "locations": ["Kimugul", "Kedowa", "Chaboot"]
+        },
+        {
+          "name": "Lelan",
+          "locations": ["Lelan", "Kiptugumo", "Kong’it"]
+        },
+        {
+          "name": "Nyangores",
+          "locations": ["Nyangores", "Kapset", "Chebyuk"]
+        },
+        {
+          "name": "Siongiroi",
+          "locations": ["Siongiroi", "Chebunyo", "Kipsonoi"]
+        }
+        ]
+      },
+      {
+        "name": "Sotik",
+        "wards": [
+          {
+          "name": "Chebunyo",
+          "locations": ["Chebunyo", "Kaplong", "Kipseret"]
+        },
+        {
+          "name": "Kapletundo",
+          "locations": ["Kapletundo", "Kipsonoi", "Siongiroi"]
+        },
+        {
+          "name": "Kong’it",
+          "locations": ["Kong’it", "Lelan", "Kiptugumo"]
+        },
+        {
+          "name": "Lelmokwo",
+          "locations": ["Lelmokwo", "Chepareria", "Cheptiret"]
+        },
+        {
+          "name": "Sotik",
+          "locations": ["Sotik Town", "Kipsonoi", "Kaplong"]
+        }
+        ]
+      }
+    ]
+  },
+  {
+    "county": "Bungoma",
+    "capital": "Bungoma",
+    "code": 39,
+    "subCounties": [
+      {
+        "name": "Bumula",
+        "wards": [
+          {
+          "name": "Khasoko",
+          "locations": ["Khasoko", "Mushikho", "Ndalu"]
+        },
+        {
+          "name": "Mumias East",
+          "locations": ["Musikoma", "Mabanga", "Nawiri"]
+        },
+        {
+          "name": "Chwele",
+          "locations": ["Chwele", "Mukhweya", "Misikhu"]
+        },
+        {
+          "name": "Naitiri",
+          "locations": ["Naitiri", "Mabanga", "Mumias"]
+        },
+        {
+          "name": "Kholera",
+          "locations": ["Kholera", "Kamukuywa", "Kibinge"]
+        }
+        ]
+      },
+      {
+        "name": "Kabuchai",
+        "wards": [
+          {
+            "name": "Kabuchai/Chwele",
+            "locations": ["Chwele","Kabuchai","Luuya"]
+          },
+          {
+            "name": "West Nalondo",
+            "locations": ["West Nalondo"]
+          },
+          {
+            "name": "Bwake/Luuya",
+            "locations": ["Bwake","Luuya"]
+          },
+          {
+            "name": "Mukuyuni",
+            "locations": ["Mukuyuni"]
+          },
+          {
+            "name": "South Bukusu",
+            "locations": ["South Bukusu"]
+          }
+        ]
+      },
+      {
+        "name": "Kanduyi",
+        "wards": [
+              {
+                "name": "Khalaba",
+                "locations": ["Khalaba", "Bukembe East"]
+              },
+              {
+                "name": "Mjini",
+                "locations": ["Mjini", "Marakaru/Tuuti"]
+              },
+              {
+                "name": "Sinoko",
+                "locations": ["Sinoko", "Bukembe West"]
+              },
+              {
+                "name": "Stadium",
+                "locations": ["Stadium", "East Sang'alo", "West Sang'alo"]
+              }
+        ]
+      },
+      {
+        "name": "Kimilili",
+        "wards": [
+          {
+            "name": "Kibingei",
+            "locations":[ "Kibingei","Kibingei Central","Kibingei East","Kibingei West"]
+          },
+          {
+            "name": "Kimilili Township",
+            "locations": [
+              "Kimilili Town",
+              "Kimilili Market",
+              "Kimilili East",
+              "Kimilili West"
+            ]
+          },
+          {
+            "name": "Kimilili Rural",
+            "locations": [
+              "Kimilili Rural East",
+              "Kimilili Rural West",
+              "Kimilili North",
+              "Kimilili South"
+            ]
+          },
+          {
+            "name": "Maeni",
+            "locations": [
+              "Maeni",
+              "Maeni East",
+              "Maeni West",
+              "Maeni North"
+            ]
+          },
+          {
+            "name": "Kamukuywa",
+            "locations": [
+              "Kamukuywa",
+              "Kamukuywa East",
+              "Kamukuywa West",
+              "Kamukuywa North"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mt Elgon",
+        "wards": [
+          {
+            "name": "Cheptais",
+            "locations": [
+              "Cheptais",
+              "Kapsokwony",
+              "Kaptama",
+              "Kopsiro"
+            ]
+          },
+          {
+            "name": "Chepyuk",
+            "locations": [
+              "Chepyuk"
+            ]
+          },
+          {
+            "name": "Chesikak",
+            "locations": [
+              "Chesikak"
+            ]
+          },
+          {
+            "name": "Elgon",
+            "locations": [
+              "Elgon"
+            ]
+          },
+          {
+            "name": "Kapkateny",
+            "locations": [
+              "Kapkateny"
+            ]
+          },
+          {
+            "name": "Kaptama",
+            "locations": [
+              "Kaptama"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sirisia",
+        "wards": [
+          {
+            "name": "Sirisia",
+            "locations": [
+              "Sirisia",
+              "Chwele",
+              "Kabuchai",
+              "Lwandanyi",
+              "Malakisi",
+              "Mukuyuni",
+              "Namwela",
+              "Namubila",
+              "North Bukusu",
+              "Sirare"
+            ]
+          },
+          {
+            "name": "Lwandanyi",
+            "locations": [
+              "Lwandanyi",
+              "Namubila",
+              "Sirare"
+            ]
+          },
+          {
+            "name": "Malakisi",
+            "locations": [
+              "Malakisi",
+              "Mukuyuni"
+            ]
+          },
+          {
+            "name": "Mukuyuni",
+            "locations": [
+              "Mukuyuni",
+              "Namwela"
+            ]
+          },
+          {
+            "name": "Namwela",
+            "locations": [
+              "Namwela",
+              "Namubila"
+            ]
+          },
+          {
+            "name": "North Bukusu",
+            "locations": [
+              "North Bukusu",
+              "Sirare"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tongaren",
+        "wards": [
+          {
+            "name": "Mbakalo",
+            "locations": ["Mbakalo", "Khalaba", "Khasoko", "Kimaeti", "South Bukusu"]
+          },
+          {
+            "name": "Naitiri/Kabuyefwe",
+            "locations": ["Naitiri", "Kabuyefwe", "Maitiri", "Kabuyefwe"]
+          },
+          {
+            "name": "Milima",
+            "locations": ["Milima", "Khalaba", "Khasoko", "Kimaeti", "South Bukusu"]
+          },
+          {
+            "name": "Ndalu",
+            "locations": ["Ndalu", "Khalaba", "Khasoko", "Kimaeti", "South Bukusu"]
+          },
+          {
+            "name": "Tongaren",
+            "locations": ["Tongaren", "Khalaba", "Khasoko", "Kimaeti", "South Bukusu"]
+          },
+          {
+            "name": "Soysambu/Mitua",
+            "locations": ["Soysambu", "Mitua", "Khalaba", "Khasoko", "Kimaeti", "South Bukusu"]
+          }
+        ]
+      },
+      {
+        "name": "Webuye east",
+        "wards": [
+          {
+            "name": "Mihuu",
+            "locations": ["Mihuu", "Lugulu", "Sango", "Makhese", "Mukhweya"]
+          },
+          {
+            "name": "Ndivisi",
+            "locations": ["Ndivisi", "Siboti", "Lwandanyi", "Mukuyuni", "Namalenge"]
+          },
+          {
+            "name": "Maraka",
+            "locations": ["Maraka", "Nabuyole", "Lukusi", "Lutacho", "Furoi"]
+          }
+        ]
+      },
+      {
+        "name": "Webuye west",
+        "wards": [
+          {
+            "name": "Matulo",
+            "locations": ["Matulo", "Township"]
+          },
+          {
+            "name": "Misikhu",
+            "locations": ["Sirende", "Mukhe", "Misikhu", "Kituni", "Malaha"]
+          },
+          {
+            "name": "Bokoli",
+            "locations": ["Bokoli", "Mahanga", "Miendo", "Matisi"]
+          },
+          {
+            "name": "Sitikho",
+            "locations": ["Milo", "Khalumuli", "Sitikho"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "county": "Busia",
+    "capital": "Busia",
+    "code": 40,
+    "subCounties": [
+      {
+        "name": "Budalangi",
+        "wards": [
+          {
+            "name": "Bunyala Central",
+            "locations": ["Bunyala Central"]
+          },
+          {
+            "name": "Bunyala West",
+            "locations": ["Bunyala West"]
+          },
+          {
+            "name": "Bunyala North",
+            "locations": ["Bunyala North"]
+          },
+          {
+            "name": "Bunyala South",
+            "locations": ["Bunyala South"]
+          }
+        ]
+      },
+      {
+        "name": "Butula",
+        "wards": [
+          {
+            "name": "Marachi West",
+            "locations": ["Bukhakhala", "Bumala A", "Busire", "Burinda", "Bujumba"]
+          },
+          {
+            "name": "Marachi North",
+            "locations": ["Bulemia", "Bumutiru", "Bukhulunya", "Bumala B"]
+          },
+          {
+            "name": "Marachi Central",
+            "locations": ["Buburi", "Bubamba", "Bukhalalire", "Bunandi"]
+          },
+          {
+            "name": "Marachi East",
+            "locations": ["Bubamba", "Bukhalalire", "Bunandi"]
+          },
+          {
+            "name": "Kingandole",
+            "locations": ["Kingandole", "Bukhalalire", "Bunandi"]
+          },
+          {
+            "name": "Elugulu",
+            "locations": ["Bulwani", "Bwaliro", "Lugulu", "Sikura", "Esibembe"]
+          }
+        ]
+      },
+      {
+        "name": "Funyula",
+        "wards": [
+          {
+            "name": "Namboboto/Nambuku",
+            "locations": ["Namboboto", "Nambuku", "Bukhwamba"]
+          },
+          {
+            "name": "Nangina",
+            "locations": ["Nangina", "Odiado", "Wakhungu"]
+          },
+          {
+            "name": "Bwiri",
+            "locations": ["Bwiri", "Bumadeya", "Bubamba"]
+          },
+          {
+            "name": "Ageng’a Nanguba",
+            "locations": ["Ageng’a", "Nanguba", "Bujumba"]
+          }
+        ]
+      },
+      {
+        "name": "Nambale",
+        "wards": [
+          {
+            "name": "Bukhayo North/Walatsi",
+            "locations": ["Walatsi", "Bukhayo North"]
+          },
+          {
+            "name": "Bukhayo East",
+            "locations": ["Bukhalalire", "Bukhulunya", "Bumadeya"]
+          },
+          {
+            "name": "Bukhayo Central",
+            "locations": ["Bukadanyi", "Buburi", "Bubamba"]
+          },
+          {
+            "name": "Nambale Township",
+            "locations": ["Nambale Town", "Sikura", "Bulwani"]
+          }
+        ]
+      },
+      {
+        "name": "Teso North",
+        "wards": [
+          {
+            "name": "Malaba Central",
+            "locations": ["Malaba Town", "Osajai", "Kamolo"]
+          },
+          {
+            "name": "Malaba North",
+            "locations": ["Kocholia", "Apokor", "Okuleu"]
+          },
+          {
+            "name": "Malaba South",
+            "locations": ["Kisoko", "Katakwa", "Amoni"]
+          },
+          {
+            "name": "Ang'urai North",
+            "locations": ["Changara", "Kakapel", "Kakemer"]
+          },
+          {
+            "name": "Ang'urai East",
+            "locations": ["Akiriamasit", "Kamuriai", "Kodedema"]
+          },
+          {
+            "name": "Ang'urai South",
+            "locations": ["Amagoro", "Ojamii", "Kocholya"]
+          }
+        ]
+      },
+      {
+        "name": "Teso South",
+        "wards": [
+          {
+            "name": "Amukura West",
+            "locations": ["Amukura", "Kwang'amor", "Katakwa"]
+          },
+          {
+            "name": "Amukura East",
+            "locations": ["Alupe", "Kocholya", "Akiriamasi"]
+          },
+          {
+            "name": "Amukura Central",
+            "locations": ["Amukura", "Kwang'amor", "Katakwa"]
+          },
+          {
+            "name": "Angorom",
+            "locations": ["Angorom", "Odiado", "Kakapel"]
+          },
+          {
+            "name": "Chakol North",
+            "locations": ["Chakol", "Ojamii", "Kakapel"]
+          },
+          {
+            "name": "Chakol South",
+            "locations": ["Chakol", "Ojamii", "Kakapel"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "county": "Elgeyo-Marakwet",
+    "capital": "Iten",
+    "code": 28,
+    "subCounties": [
+      {
+        "name": "Keiyo north",
+        "wards": [
+        {
+          "name": "Kamariny",
+          "locations": ["Kaplamai", "Sergoit", "Kiptabus", "Katalel", "Chesitek", "Kipsoen", "Chelingwa", "Kapteren", "Kapkoi"]
+        },
+        {
+          "name": "Emsoo",
+          "locations": ["Kapchelel", "Chegilet", "Kaptum", "Emsoo", "Nyalil", "Kobulwo", "Kibendo", "Kamoingon"]
+        },
+        {
+          "name": "Tambach",
+          "locations": ["Rimoi", "Kessup", "Setek", "Kapterik", "Siroch", "Anin", "Kipka"]
+        },
+        {
+          "name": "Kapchemutwa",
+          "locations": ["Korkitony", "Kendur", "Kapkatui", "Bugar", "Kapkonga", "Singore", "Kapkessum", "Chebokokwa", "Mindililwa", "Iten"]
+        }
+        ]
+      },
+      {
+        "name": "Keiyo south",
+        "wards": [
+          {
+            "name": "Kaptarakwa",
+            "locations": ["Chemoibon", "Chepsigot", "Epke", "Kabiemit", "Kamwosor", "Kapkwony", "Kaptarakwa", "Kibargoi", "Kitany", "Kocholwo", "Maoi", "Marichor", "Metkei", "Mosop", "Nyaru", "Soy", "Tumeiyo"]
+          },
+          {
+            "name": "Chepkorio",
+            "locations": ["Chemoibon", "Chepsigot", "Epke", "Kabiemit", "Kamwosor", "Kapkwony", "Kaptarakwa", "Kibargoi", "Kitany", "Kocholwo", "Maoi", "Marichor", "Metkei", "Mosop", "Nyaru", "Soy", "Tumeiyo"]
+          },
+          {
+            "name": "Soy North",
+            "locations": ["Chemoibon", "Chepsigot", "Epke", "Kabiemit", "Kamwosor", "Kapkwony", "Kaptarakwa", "Kibargoi", "Kitany", "Kocholwo", "Maoi", "Marichor", "Metkei", "Mosop", "Nyaru", "Soy", "Tumeiyo"]
+          },
+          {
+            "name": "Soy South",
+            "locations": ["Chemoibon", "Chepsigot", "Epke", "Kabiemit", "Kamwosor", "Kapkwony", "Kaptarakwa", "Kibargoi", "Kitany", "Kocholwo", "Maoi", "Marichor", "Metkei", "Mosop", "Nyaru", "Soy", "Tumeiyo"]
+          },
+          {
+            "name": "Kabiemit",
+            "locations": ["Chemoibon", "Chepsigot", "Epke", "Kabiemit", "Kamwosor", "Kapkwony", "Kaptarakwa", "Kibargoi", "Kitany", "Kocholwo", "Maoi", "Marichor", "Metkei", "Mosop", "Nyaru", "Soy", "Tumeiyo"]
+          },
+          {
+            "name": "Metkei",
+            "locations": ["Chemoibon", "Chepsigot", "Epke", "Kabiemit", "Kamwosor", "Kapkwony", "Kaptarakwa", "Kibargoi", "Kitany", "Kocholwo", "Maoi", "Marichor", "Metkei", "Mosop", "Nyaru", "Soy", "Tumeiyo"]
+          }
+        ]
+      },
+      {
+        "name": "Marakwet east",
+        "wards": [
+          {
+            "name": "Kapyego",
+            "locations": ["Kapyego", "Kaptich", "Kapsowar"]
+          },
+          {
+            "name": "Sambirir",
+            "locations": ["Sambirir", "Kipkaner", "Mon", "Murkutwo", "Koibirir"]
+          },
+          {
+            "name": "Endo",
+            "locations": ["Endo", "Mokoro"]
+          },
+          {
+            "name": "Embobut/Embolot",
+            "locations": ["Embobut", "Embolot"]
+          }
+        ]
+      },
+      {
+        "name": "Marakwet west",
+        "wards": [
+          {
+            "name": "Arror",
+            "locations": ["Arror"]
+          },
+          {
+            "name": "Cherang'any/Chebororwa",
+            "locations": ["Cherang'any", "Chebororwa"]
+          },
+          {
+            "name": "Moiben/Kuserwo",
+            "locations": ["Moiben", "Kuserwo"]
+          },
+          {
+            "name": "Kapsowar",
+            "locations": ["Kapsowar"]
+          },
+          {
+            "name": "Lelan",
+            "locations": ["Lelan"]
+          },
+          {
+            "name": "Sengwer",
+            "locations": ["Sengwer"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "county": "Embu",
+    "capital": "Embu",
+    "code": 14,
+    "subCounties": [
+      {
+        "name": "Manyatta",
+        "wards": [
+          {
+            "name": "Kirimari",
+            "locations": ["Kirimari Location", "Kirimari Sub-Location"]
+          },
+          {
+            "name": "Nginda",
+            "locations": ["Nginda Location", "Nginda Sub-Location"]
+          },
+          {
+            "name": "Gaturi South",
+            "locations": ["Gaturi South Location", "Gaturi South Sub-Location"]
+          },
+          {
+            "name": "Mbeti North",
+            "locations": ["Mbeti North Location", "Mbeti North Sub-Location"]
+          },
+          {
+            "name": "Ruguru",
+            "locations": ["Ruguru Location", "Ruguru Sub-Location"]
+          },
+          {
+            "name": "Ngandori",
+            "locations": ["Ngandori Location", "Ngandori Sub-Location"]
+          }
+        ]
+      },
+      {
+        "name": "Mbeere north",
+        "wards": [
+          {
+            "name": "Evurore",
+            "locations": ["Evurore Location", "Evurore Sub-Location"]
+          },
+          {
+            "name": "Muminji",
+            "locations": ["Muminji Location", "Muminji Sub-Location"]
+          },
+          {
+            "name": "Nthawa",
+            "locations": ["Nthawa Location", "Nthawa Sub-Location"]
+          }
+        ]
+      },
+      {
+        "name": "Mbeere south",
+        "wards": [
+            {"name": "Mwea", "locations": ["Mwea"]},
+            {"name": "Makima", "locations": ["Makima"]},
+            {"name": "Mbeti South", "locations": ["Mbeti South"]},
+            {"name": "Mavuria", "locations": ["Mavuria"]},
+            {"name": "Kiambere", "locations": ["Kiambere"]}
+        ]
+      },
+      {
+        "name": "Runyenjes",
+        "wards": [
+          {"name": "Gaturi North", "locations": ["Gaturi North"]},
+          {"name": "Kagaari South", "locations": ["Kagaari South"]},
+          {"name": "Kagaari North", "locations": ["Kagaari North"]},
+          {"name": "Central", "locations": ["Central"]},
+          {"name": "Kyeni North", "locations": ["Kyeni North"]},
+          {"name": "Kyeni South", "locations": ["Kyeni South"]}
+        ]
+      }
+    ]
+  },
+  {
+    "county": "Garissa",
+    "capital": "Garissa",
+    "code": 7,
+    "subCounties": [
+      {
+        "name": "Daadab",
+        "wards": [
+            {
+              "name": "Dertu",
+              "locations": ["Dertu Location", "Dertu Sub-Location"]
+            },
+            {
+              "name": "Dadaab",
+              "locations": ["Dadaab Location", "Dadaab Sub-Location"]
+            },
+            {
+              "name": "Labasigale",
+              "locations": ["Labasigale Location", "Labasigale Sub-Location"]
+            },
+            {
+              "name": "Damajale",
+              "locations": ["Damajale Location", "Damajale Sub-Location"]
+            },
+            {
+              "name": "Liboi",
+              "locations": ["Liboi Location", "Liboi Sub-Location"]
+            },
+            {
+              "name": "Abakaile",
+              "locations": ["Abakaile Location", "Abakaile Sub-Location"]
+            }
+        ]
+      },
+      {
+        "name": "Fafi",
+        "wards": [
+           {
+              "name": "Bura",
+              "locations": ["Bura Location", "Bura Sub-Location"]
+            },
+            {
+              "name": "Dekaharia",
+              "locations": ["Dekaharia Location", "Dekaharia Sub-Location"]
+            },
+            {
+              "name": "Jarajila",
+              "locations": ["Jarajila Location", "Jarajila Sub-Location"]
+            },
+            {
+              "name": "Fafi",
+              "locations": ["Fafi Location", "Fafi Sub-Location"]
+            },
+            {
+              "name": "Nanighi",
+              "locations": ["Nanighi Location", "Nanighi Sub-Location"]
+            },
+            {
+              "name": "Welmerer",
+              "locations": ["Welmerer Location", "Welmerer Sub-Location"]
+            }
+        ]
+      },
+      {
+        "name": "Garissa",
+        "wards": [
+          {
+            "name": "Waberi",
+            "locations": ["Waberi Location", "Waberi Sub-Location"]
+          },
+          {
+            "name": "Galbet",
+            "locations": ["Galbet Location", "Galbet Sub-Location"]
+          },
+          {
+            "name": "Township",
+            "locations": ["Township Location", "Township Sub-Location"]
+          },
+          {
+            "name": "Iftin",
+            "locations": ["Iftin Location", "Iftin Sub-Location"]
+          }
+        ]
+      },
+      {
+        "name": "Lagdera",
+        "wards": [
+          {
+            "name": "Modogashe",
+            "locations": ["Modogashe Location", "Modogashe Sub-Location"]
+          },
+          {
+            "name": "Benane",
+            "locations": ["Benane Location", "Benane Sub-Location"]
+          },
+          {
+            "name": "Goreale",
+            "locations": ["Goreale Location", "Goreale Sub-Location"]
+          },
+          {
+            "name": "Maalamin",
+            "locations": ["Maalamin Location", "Maalamin Sub-Location"]
+          },
+          {
+            "name": "Sabena",
+            "locations": ["Sabena Location", "Sabena Sub-Location"]
+          },
+          {
+            "name": "Baraki",
+            "locations": ["Baraki Location", "Baraki Sub-Location"]
+          }
+        ]
+      },
+      {
+        "name": "Ijara",
+        "wards": [
+            {
+              "name": "Hulugho",
+              "locations": ["Hulugho Location", "Hulugho Sub-Location"]
+            },
+            {
+              "name": "Sangailu",
+              "locations": ["Sangailu Location", "Sangailu Sub-Location"]
+            },
+            {
+              "name": "Ijara",
+              "locations": ["Ijara Location", "Ijara Sub-Location"]
+            },
+            {
+              "name": "Masalani",
+              "locations": ["Masalani Location", "Masalani Sub-Location"]
+            }
+        ]
+      },
+      {
+        "name": "Balambala",
+        "wards": [
+          {
+            "name": "Balambala",
+            "locations": ["Balambala Location", "Balambala Sub-Location"]
+          },
+          {
+            "name": "Danyere",
+            "locations": ["Danyere Location", "Danyere Sub-Location"]
+          },
+          {
+            "name": "Jarajara",
+            "locations": ["Jarajara Location", "Jarajara Sub-Location"]
+          },
+          {
+            "name": "Saka",
+            "locations": ["Saka Location", "Saka Sub-Location"]
+          },
+          {
+            "name": "Sankuri",
+            "locations": ["Sankuri Location", "Sankuri Sub-Location"]
+          }
+              ]
+      }
+    ]
+  },
+  {
+    "county": "Homa Bay",
+    "capital": "Homa Bay",
+    "code": 43,
+    "subCounties": [
+      {
+        "name": "Homabay town",
+        "wards": []
+      },
+      {
+        "name": "Kabondo",
+        "wards": []
+      },
+      {
+        "name": "Karachwonyo",
+        "wards": []
+      },
+      {
+        "name": "Kasipul",
+        "wards": []
+      },
+      {
+        "name": "Mbita",
+        "wards": []
+      },
+      {
+        "name": "Ndhiwa",
+        "wards": []
+      },
+      {
+        "name": "Rangwe",
+        "wards": []
+      },
+      {
+        "name": "Suba",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Isiolo",
+    "capital": "Isiolo",
+    "code": 11,
+    "subCounties": [
+      {
+        "name": "Central",
+        "wards": []
+      },
+      {
+        "name": "Garba tula",
+        "wards": []
+      },
+      {
+        "name": "Kina",
+        "wards": []
+      },
+      {
+        "name": "Merit",
+        "wards": []
+      },
+      {
+        "name": "Oldonyiro",
+        "wards": []
+      },
+      {
+        "name": "Sericho",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Kajiado",
+    "capital": null,
+    "code": 34,
+    "subCounties": [
+      {
+        "name": "Isinya.",
+        "wards": []
+      },
+      {
+        "name": "Kajiado Central.",
+        "wards": []
+      },
+      {
+        "name": "Kajiado North.",
+        "wards": []
+      },
+      {
+        "name": "Loitokitok.",
+        "wards": []
+      },
+      {
+        "name": "Mashuuru.",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Kakamega",
+    "capital": "Kakamega",
+    "code": 37,
+    "subCounties": [
+      {
+        "name": "Butere",
+        "wards": []
+      },
+      {
+        "name": "Kakamega central",
+        "wards": []
+      },
+      {
+        "name": "Kakamega east",
+        "wards": []
+      },
+      {
+        "name": "Kakamega north",
+        "wards": []
+      },
+      {
+        "name": "Kakamega south",
+        "wards": []
+      },
+      {
+        "name": "Khwisero",
+        "wards": []
+      },
+      {
+        "name": "Lugari",
+        "wards": []
+      },
+      {
+        "name": "Lukuyani",
+        "wards": []
+      },
+      {
+        "name": "Lurambi",
+        "wards": []
+      },
+      {
+        "name": "Matete",
+        "wards": []
+      },
+      {
+        "name": "Mumias",
+        "wards": []
+      },
+      {
+        "name": "Mutungu",
+        "wards": []
+      },
+      {
+        "name": "Navakholo",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Kericho",
+    "capital": "Kericho",
+    "code": 35,
+    "subCounties": [
+      {
+        "name": "Ainamoi",
+        "wards": []
+      },
+      {
+        "name": "Belgut",
+        "wards": []
+      },
+      {
+        "name": "Bureti",
+        "wards": []
+      },
+      {
+        "name": "Kipkelion east",
+        "wards": []
+      },
+      {
+        "name": "Kipkelion west",
+        "wards": []
+      },
+      {
+        "name": "Soin sigowet",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Kiambu",
+    "capital": "Kiambu",
+    "code": 22,
+    "subCounties": [
+      {
+        "name": "Gatundu north",
+        "wards": []
+      },
+      {
+        "name": "Gatundu south",
+        "wards": []
+      },
+      {
+        "name": "Githunguri",
+        "wards": []
+      },
+      {
+        "name": "Juja",
+        "wards": []
+      },
+      {
+        "name": "Kabete",
+        "wards": []
+      },
+      {
+        "name": "Kiambaa",
+        "wards": []
+      },
+      {
+        "name": "Kiambu",
+        "wards": []
+      },
+      {
+        "name": "Kikuyu",
+        "wards": []
+      },
+      {
+        "name": "Limuru",
+        "wards": []
+      },
+      {
+        "name": "Ruiru",
+        "wards": []
+      },
+      {
+        "name": "Thika town",
+        "wards": []
+      },
+      {
+        "name": "lari",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Kilifi",
+    "capital": "Kilifi",
+    "code": 3,
+    "subCounties": [
+      {
+        "name": "Genzw",
+        "wards": []
+      },
+      {
+        "name": "Kaloleni",
+        "wards": []
+      },
+      {
+        "name": "Kilifi north",
+        "wards": []
+      },
+      {
+        "name": "Kilifi south",
+        "wards": []
+      },
+      {
+        "name": "Magarini",
+        "wards": []
+      },
+      {
+        "name": "Malindi",
+        "wards": []
+      },
+      {
+        "name": "Rabai",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Kirinyaga",
+    "capital": "Kerugoya/Kutus",
+    "code": 20,
+    "subCounties": [
+      {
+        "name": "Kirinyaga central",
+        "wards": []
+      },
+      {
+        "name": "Kirinyaga east",
+        "wards": []
+      },
+      {
+        "name": "Kirinyaga west",
+        "wards": []
+      },
+      {
+        "name": "Mwea east",
+        "wards": []
+      },
+      {
+        "name": "Mwea west",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Kisii",
+    "capital": "Kisii",
+    "code": 45,
+    "subCounties": []
+  },
+  {
+    "county": "Kisumu",
+    "capital": "Kisumu",
+    "code": 42,
+    "subCounties": [
+      {
+        "name": "Kisumu central",
+        "wards": []
+      },
+      {
+        "name": "Kisumu east",
+        "wards": []
+      },
+      {
+        "name": "Kisumu west",
+        "wards": []
+      },
+      {
+        "name": "Mohoroni",
+        "wards": []
+      },
+      {
+        "name": "Nyakach",
+        "wards": []
+      },
+      {
+        "name": "Nyando",
+        "wards": []
+      },
+      {
+        "name": "Seme",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Kitui",
+    "capital": "Kitui",
+    "code": 15,
+    "subCounties": [
+      {
+        "name": "Ikutha",
+        "wards": []
+      },
+      {
+        "name": "Katulani",
+        "wards": []
+      },
+      {
+        "name": "Kisasi",
+        "wards": []
+      },
+      {
+        "name": "Kitui central",
+        "wards": []
+      },
+      {
+        "name": "Kitui west",
+        "wards": []
+      },
+      {
+        "name": "Lower yatta",
+        "wards": []
+      },
+      {
+        "name": "Matiyani",
+        "wards": []
+      },
+      {
+        "name": "Migwani",
+        "wards": []
+      },
+      {
+        "name": "Mutitu",
+        "wards": []
+      },
+      {
+        "name": "Mutomo",
+        "wards": []
+      },
+      {
+        "name": "Muumonikyusu",
+        "wards": []
+      },
+      {
+        "name": "Mwingi central",
+        "wards": []
+      },
+      {
+        "name": "Mwingi east",
+        "wards": []
+      },
+      {
+        "name": "Nzambani",
+        "wards": []
+      },
+      {
+        "name": "Tseikuru",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Kwale",
+    "capital": "Kwale",
+    "code": 2,
+    "subCounties": [
+      {
+        "name": "Kinango",
+        "wards": []
+      },
+      {
+        "name": "Lungalunga",
+        "wards": []
+      },
+      {
+        "name": "Msambweni",
+        "wards": []
+      },
+      {
+        "name": "Mutuga",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Laikipia",
+    "capital": "Rumuruti",
+    "code": 31,
+    "subCounties": [
+      {
+        "name": "Laikipia central",
+        "wards": []
+      },
+      {
+        "name": "Laikipia east",
+        "wards": []
+      },
+      {
+        "name": "Laikipia north",
+        "wards": []
+      },
+      {
+        "name": "Laikipia west",
+        "wards": []
+      },
+      {
+        "name": "Nyahururu",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Lamu",
+    "capital": "Lamu",
+    "code": 5,
+    "subCounties": [
+      {
+        "name": "Lamu East",
+        "wards": []
+      },
+      {
+        "name": "Lamu West",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Machakos",
+    "capital": "Machakos",
+    "code": 16,
+    "subCounties": [
+      {
+        "name": "Kathiani",
+        "wards": []
+      },
+      {
+        "name": "Machakos town",
+        "wards": []
+      },
+      {
+        "name": "Masinga",
+        "wards": []
+      },
+      {
+        "name": "Matungulu",
+        "wards": []
+      },
+      {
+        "name": "Mavoko",
+        "wards": []
+      },
+      {
+        "name": "Mwala",
+        "wards": []
+      },
+      {
+        "name": "Yatta",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Makueni",
+    "capital": "Wote",
+    "code": 17,
+    "subCounties": [
+      {
+        "name": "Kaiti",
+        "wards": []
+      },
+      {
+        "name": "Kibwei west",
+        "wards": []
+      },
+      {
+        "name": "Kibwezi east",
+        "wards": []
+      },
+      {
+        "name": "Kilome",
+        "wards": []
+      },
+      {
+        "name": "Makueni",
+        "wards": []
+      },
+      {
+        "name": "Mbooni",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Mandera",
+    "capital": "Mandera",
+    "code": 9,
+    "subCounties": [
+      {
+        "name": "Banissa",
+        "wards": []
+      },
+      {
+        "name": "Lafey",
+        "wards": []
+      },
+      {
+        "name": "Mandera East",
+        "wards": []
+      },
+      {
+        "name": "Mandera North",
+        "wards": []
+      },
+      {
+        "name": "Mandera South",
+        "wards": []
+      },
+      {
+        "name": "Mandera West",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Marsabit",
+    "capital": "Marsabit",
+    "code": 10,
+    "subCounties": [
+      {
+        "name": "Laisamis",
+        "wards": []
+      },
+      {
+        "name": "Moyale",
+        "wards": []
+      },
+      {
+        "name": "North hor",
+        "wards": []
+      },
+      {
+        "name": "Saku",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Meru",
+    "capital": "Meru",
+    "code": 12,
+    "subCounties": [
+      {
+        "name": "Buuri",
+        "wards": []
+      },
+      {
+        "name": "Igembe central",
+        "wards": []
+      },
+      {
+        "name": "Igembe north",
+        "wards": []
+      },
+      {
+        "name": "Igembe south",
+        "wards": []
+      },
+      {
+        "name": "Imenti central",
+        "wards": []
+      },
+      {
+        "name": "Imenti north",
+        "wards": []
+      },
+      {
+        "name": "Imenti south",
+        "wards": []
+      },
+      {
+        "name": "Tigania east",
+        "wards": []
+      },
+      {
+        "name": "Tigania west",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Migori",
+    "capital": "Migori",
+    "code": 44,
+    "subCounties": [
+      {
+        "name": "Awendo",
+        "wards": []
+      },
+      {
+        "name": "Kuria east",
+        "wards": []
+      },
+      {
+        "name": "Kuria west",
+        "wards": []
+      },
+      {
+        "name": "Mabera",
+        "wards": []
+      },
+      {
+        "name": "Ntimaru",
+        "wards": []
+      },
+      {
+        "name": "Rongo",
+        "wards": []
+      },
+      {
+        "name": "Suna east",
+        "wards": []
+      },
+      {
+        "name": "Suna west",
+        "wards": []
+      },
+      {
+        "name": "Uriri",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Mombasa",
+    "capital": "Mombasa City",
+    "code": 1,
+    "subCounties": [
+      {
+        "name": "Changamwe",
+        "wards": []
+      },
+      {
+        "name": "Jomvu",
+        "wards": []
+      },
+      {
+        "name": "Kisauni",
+        "wards": []
+      },
+      {
+        "name": "Likoni",
+        "wards": []
+      },
+      {
+        "name": "Mvita",
+        "wards": []
+      },
+      {
+        "name": "Nyali",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Murang'a",
+    "capital": "Murang'a",
+    "code": 21,
+    "subCounties": [
+      {
+        "name": "Gatanga",
+        "wards": []
+      },
+      {
+        "name": "Kahuro",
+        "wards": []
+      },
+      {
+        "name": "Kandara",
+        "wards": []
+      },
+      {
+        "name": "Kangema",
+        "wards": []
+      },
+      {
+        "name": "Kigumo",
+        "wards": []
+      },
+      {
+        "name": "Kiharu",
+        "wards": []
+      },
+      {
+        "name": "Mathioya",
+        "wards": []
+      },
+      {
+        "name": "Murang’a south",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Nairobi",
+    "capital": "Nairobi City",
+    "code": 47,
+    "subCounties": [
+      {
+        "name": "Dagoretti North Sub County",
+        "wards": []
+      },
+      {
+        "name": "Dagoretti South Sub County",
+        "wards": []
+      },
+      {
+        "name": "Embakasi Central Sub Count",
+        "wards": []
+      },
+      {
+        "name": "Embakasi East Sub County",
+        "wards": []
+      },
+      {
+        "name": "Embakasi North Sub County",
+        "wards": []
+      },
+      {
+        "name": "Embakasi South Sub County",
+        "wards": []
+      },
+      {
+        "name": "Embakasi West Sub County",
+        "wards": []
+      },
+      {
+        "name": "Kamukunji Sub County",
+        "wards": []
+      },
+      {
+        "name": "Kasarani Sub County",
+        "wards": []
+      },
+      {
+        "name": "Kibra Sub County",
+        "wards": []
+      },
+      {
+        "name": "Lang'ata Sub County",
+        "wards": []
+      },
+      {
+        "name": "Makadara Sub County",
+        "wards": []
+      },
+      {
+        "name": "Mathare Sub County",
+        "wards": []
+      },
+      {
+        "name": "Roysambu Sub County",
+        "wards": []
+      },
+      {
+        "name": "Ruaraka Sub County",
+        "wards": []
+      },
+      {
+        "name": "Starehe Sub County",
+        "wards": []
+      },
+      {
+        "name": "Westlands Sub County",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Nakuru",
+    "capital": "Nakuru",
+    "code": 32,
+    "subCounties": [
+      {
+        "name": "Bahati",
+        "wards": []
+      },
+      {
+        "name": "Gilgil",
+        "wards": []
+      },
+      {
+        "name": "Kuresoi north",
+        "wards": []
+      },
+      {
+        "name": "Kuresoi south",
+        "wards": []
+      },
+      {
+        "name": "Molo",
+        "wards": []
+      },
+      {
+        "name": "Naivasha",
+        "wards": []
+      },
+      {
+        "name": "Nakuru town east",
+        "wards": []
+      },
+      {
+        "name": "Nakuru town west",
+        "wards": []
+      },
+      {
+        "name": "Njoro",
+        "wards": []
+      },
+      {
+        "name": "Rongai",
+        "wards": []
+      },
+      {
+        "name": "Subukia",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Nandi",
+    "capital": "Kapsabet",
+    "code": 29,
+    "subCounties": [
+      {
+        "name": "Aldai",
+        "wards": []
+      },
+      {
+        "name": "Chesumei",
+        "wards": []
+      },
+      {
+        "name": "Emgwen",
+        "wards": []
+      },
+      {
+        "name": "Mosop",
+        "wards": []
+      },
+      {
+        "name": "Namdi hills",
+        "wards": []
+      },
+      {
+        "name": "Tindiret",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Narok",
+    "capital": "Narok",
+    "code": 33,
+    "subCounties": [
+      {
+        "name": "Narok east",
+        "wards": []
+      },
+      {
+        "name": "Narok north",
+        "wards": []
+      },
+      {
+        "name": "Narok south",
+        "wards": []
+      },
+      {
+        "name": "Narok west",
+        "wards": []
+      },
+      {
+        "name": "Transmara east",
+        "wards": []
+      },
+      {
+        "name": "Transmara west",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Nyamira",
+    "capital": "Nyamira",
+    "code": 46,
+    "subCounties": [
+      {
+        "name": "Borabu",
+        "wards": []
+      },
+      {
+        "name": "Manga",
+        "wards": []
+      },
+      {
+        "name": "Masaba north",
+        "wards": []
+      },
+      {
+        "name": "Nyamira north",
+        "wards": []
+      },
+      {
+        "name": "Nyamira south",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Nyandarua",
+    "capital": "Ol Kalou",
+    "code": 18,
+    "subCounties": [
+      {
+        "name": "Kinangop",
+        "wards": []
+      },
+      {
+        "name": "Kipipiri",
+        "wards": []
+      },
+      {
+        "name": "Ndaragwa",
+        "wards": []
+      },
+      {
+        "name": "Ol Kalou",
+        "wards": []
+      },
+      {
+        "name": "Ol joro orok",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Nyeri",
+    "capital": "Nyeri",
+    "code": 19,
+    "subCounties": [
+      {
+        "name": "Kieni east",
+        "wards": []
+      },
+      {
+        "name": "Kieni west",
+        "wards": []
+      },
+      {
+        "name": "Mathira east",
+        "wards": []
+      },
+      {
+        "name": "Mathira west",
+        "wards": []
+      },
+      {
+        "name": "Mkurweni",
+        "wards": []
+      },
+      {
+        "name": "Nyeri town",
+        "wards": []
+      },
+      {
+        "name": "Othaya",
+        "wards": []
+      },
+      {
+        "name": "Tetu",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Samburu",
+    "capital": "Maralal",
+    "code": 25,
+    "subCounties": [
+      {
+        "name": "Samburu east",
+        "wards": []
+      },
+      {
+        "name": "Samburu north",
+        "wards": []
+      },
+      {
+        "name": "Samburu west",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Siaya",
+    "capital": "Siaya",
+    "code": 41,
+    "subCounties": [
+      {
+        "name": "Alego usonga",
+        "wards": []
+      },
+      {
+        "name": "Bondo",
+        "wards": []
+      },
+      {
+        "name": "Gem",
+        "wards": []
+      },
+      {
+        "name": "Rarieda",
+        "wards": []
+      },
+      {
+        "name": "Ugenya",
+        "wards": []
+      },
+      {
+        "name": "Unguja",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Taita-Taveta",
+    "capital": "Voi",
+    "code": 6,
+    "subCounties": [
+      {
+        "name": "Mwatate",
+        "wards": []
+      },
+      {
+        "name": "Taveta",
+        "wards": []
+      },
+      {
+        "name": "Voi",
+        "wards": []
+      },
+      {
+        "name": "Wundanyi",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Tana River",
+    "capital": "Hola",
+    "code": 4,
+    "subCounties": [
+      {
+        "name": "Bura",
+        "wards": []
+      },
+      {
+        "name": "Galole",
+        "wards": []
+      },
+      {
+        "name": "Garsen",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Tharaka-Nithi",
+    "capital": "Chuka",
+    "code": 13,
+    "subCounties": [
+      {
+        "name": "Chuka",
+        "wards": []
+      },
+      {
+        "name": "Igambangobe",
+        "wards": []
+      },
+      {
+        "name": "Maara",
+        "wards": []
+      },
+      {
+        "name": "Muthambi",
+        "wards": []
+      },
+      {
+        "name": "Tharak north",
+        "wards": []
+      },
+      {
+        "name": "Tharaka south",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Trans-Nzoia",
+    "capital": "Kitale",
+    "code": 26,
+    "subCounties": [
+      {
+        "name": "Cherangany",
+        "wards": []
+      },
+      {
+        "name": "Endebess",
+        "wards": []
+      },
+      {
+        "name": "Kiminini",
+        "wards": []
+      },
+      {
+        "name": "Kwanza",
+        "wards": []
+      },
+      {
+        "name": "Saboti",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Turkana",
+    "capital": "Lodwar",
+    "code": 23,
+    "subCounties": [
+      {
+        "name": "Loima",
+        "wards": []
+      },
+      {
+        "name": "Turkana central",
+        "wards": []
+      },
+      {
+        "name": "Turkana east",
+        "wards": []
+      },
+      {
+        "name": "Turkana north",
+        "wards": []
+      },
+      {
+        "name": "Turkana south",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Uasin Gishu",
+    "capital": "Eldoret",
+    "code": 27,
+    "subCounties": [
+      {
+        "name": "Ainabkoi",
+        "wards": []
+      },
+      {
+        "name": "Kapseret",
+        "wards": []
+      },
+      {
+        "name": "Kesses",
+        "wards": []
+      },
+      {
+        "name": "Moiben",
+        "wards": []
+      },
+      {
+        "name": "Soy",
+        "wards": []
+      },
+      {
+        "name": "Turbo",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Vihiga",
+    "capital": "Vihiga",
+    "code": 38,
+    "subCounties": [
+      {
+        "name": "Emuhaya",
+        "wards": []
+      },
+      {
+        "name": "Hamisi",
+        "wards": []
+      },
+      {
+        "name": "Luanda",
+        "wards": []
+      },
+      {
+        "name": "Sabatia",
+        "wards": []
+      },
+      {
+        "name": "vihiga",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "Wajir",
+    "capital": "Wajir",
+    "code": 8,
+    "subCounties": [
+      {
+        "name": "Eldas",
+        "wards": []
+      },
+      {
+        "name": "Tarbaj",
+        "wards": []
+      },
+      {
+        "name": "Wajir East",
+        "wards": []
+      },
+      {
+        "name": "Wajir North",
+        "wards": []
+      },
+      {
+        "name": "Wajir South",
+        "wards": []
+      },
+      {
+        "name": "Wajir West",
+        "wards": []
+      }
+    ]
+  },
+  {
+    "county": "West Pokot",
+    "capital": "Kapenguria",
+    "code": 24,
+    "subCounties": [
+      {
+        "name": "Central Pokot",
+        "wards": []
+      },
+      {
+        "name": "North Pokot",
+        "wards": []
+      },
+      {
+        "name": "Pokot South",
+        "wards": []
+      },
+      {
+        "name": "West Pokot",
+        "wards": []
+      }
+    ]
+  }
+]
