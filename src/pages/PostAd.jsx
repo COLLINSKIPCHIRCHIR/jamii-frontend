@@ -3,7 +3,11 @@ import { useNavigate, useParams } from 'react-router-dom'
 import api from '../services/api'
 import './postAd.css';
 const baseURL = import.meta.env.VITE_API_URL;
+const imageURL = import.meta.env.VITE_IMAGE_URL;
+
 import locationsData from '../data/kenya_administrative_structure.json'
+
+console.log('API Base URL:', baseURL);
 
 const PostAd = () => {
   const navigate = useNavigate();
@@ -11,18 +15,12 @@ const PostAd = () => {
   const fileInputRef = useRef(null); //for file selection
 
 //location hierarchy state
-// county - sub-county - ward - location 
+// county - sub-county  
   const [counties, setCounties] = useState([]);
   const [subCounties, setSubCounties] = useState([]);
-  const [wards, setWards] = useState([]);
-  const [locations, setLocations] = useState([]);
-
   const [selectedCounty, setSelectedCounty] = useState('');
   const [selectedSubCounty, setSelectedSubCounty] = useState('');
-  const [selectedWard, setSelectedWard] = useState('');
-  const [selectedLocation, setSelectedLocation] = useState('');
-
-
+  
   const [categories, setCategories] = useState([]); // { name, subcategories[] }
   const [subCategories, setSubCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -62,7 +60,7 @@ const PostAd = () => {
       setCounties(countryList);
       console.log('Loaded counties:', countryList.length);
     } catch (err) {
-      console.error('Failed to load reference data:', err);
+      console.error('Failed to load reference data:', err.message);
     }
   };
 
@@ -80,15 +78,15 @@ const PostAd = () => {
             Authorization: `Bearer ${localStorage.getItem('token')}`
           }
         })
-        setForm({ name: data.name, description: data.description, price: data.price, images: data.images || [] });
+        console.log('Fetched ad data:', data);
+        setForm({ name: data.name, description: data.description, price: String(data.price), images: data.images || [] });
           //pre-select category / location
           setSelectedCategory(data.category);
           setSelectedSubCategory(data.subcategory);
           setSelectedCounty(data.county);
-          setSelectedSubCounty(data.subCounty);
-          setSelectedWard(data.ward);
-          setSelectedLocation(data.location);
+          setSelectedSubCounty(data.subcounty);
       } catch (err) {
+        console.log('Editing adId:', adId);
         console.error('Error loading ad:' , err.message);
         setError('Failed to load ad for editing.')
       }
@@ -105,49 +103,30 @@ useEffect(() => {
     const sorted = (county?.subCounties || []).map(s => s.name).sort((a, b) => a.localeCompare(b));
     setSubCounties(sorted);
     setSelectedSubCounty('');
-    setWards([]); setLocations([]);
 }, [selectedCounty]);
 
+//populate subcategories when selectedcategory changes
 useEffect(() => {
-    if (!selectedSubCounty) { setWards([]); setSelectedWard(''); return;};
-    const county = locationsData.find(c => c.county === selectedCounty);
-    const sub = county?.subCounties?.find(s => s.name === selectedSubCounty);
-    console.log('SubCounty:', sub);
-    const sorted = (sub?.wards || []).map(w => w.name).sort((a, b) => a.localeCompare(b));
-    setWards(sorted);
-    setSelectedWard('');
-    setLocations([]); 
-}, [selectedSubCounty, selectedCounty]);
-
-useEffect(() => {
-    if (!selectedWard) { setLocations([]); setSelectedLocation(''); return; }
-    const county = locationsData.find(c => c.county === selectedCounty);
-    const sub = county?.subCounties?.find(s => s.name === selectedSubCounty);
-    const ward = sub?.wards?.find(w => w.name === selectedWard);
-    
-    console.log('Selected:', selectedCounty, selectedSubCounty, selectedWard);
-    console.log('Available ward names:', sub?.wards?.map(w => w.name));
-    console.log('Ward:', ward);
-
-    if (!ward) {
-      console.warn('No matching ward found for:', selectedWard);
-      return;
-    }
-
-    const sorted = (ward?.locations || []).sort((a, b) => a.localeCompare(b));
-    setLocations(sorted);
-    setSelectedLocation('');
-}, [selectedWard, selectedSubCounty, selectedCounty]);
-
+  if (!selectedCategory) {
+    setSubCategories([]);
+    setSelectedSubCategory('');
+    return;
+  }
+  const found = categories.find((c) => c.name === selectedCategory);
+  setSubCategories(found?.subcategories || []);
+  //only reset selectedsubCategory if it's not valid for the new category
+  if (selectedSubCategory && !found?.subcategories.includes
+  (selectedSubCategory)) {
+      setSelectedSubCategory('');
+  }
+  
+}, [selectedCategory, categories])
 
 
 //category - subcategory cascade
 const handleCategoryChange = (e) => {
   const cat = e.target.value;
   setSelectedCategory(cat);
-  const found = categories.find((c) => c.name === cat );
-  setSubCategories(found?.subcategories || []);
-  setSelectedSubCategory('');
 };
 
 
@@ -162,18 +141,33 @@ const handleCategoryChange = (e) => {
 
     try { 
       setUploading(true);
+      console.log("Form data being sent:", formData);
       const {data} = await api.post('/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${localStorage.getItem('token')}`,//
         }
       });
-      setForm((prev) => ({
-        ...prev,
-        images: [...prev.images, ...data],
-      }));
+      console.log('Upload response:', data);
+      console.log('Existing form.images:', form.images);
+
+      //fix based on actual structure
+      setForm((prev) => {
+        const newImages = Array.isArray(data)
+          ? data
+          : data?.urls
+          ? data.urls
+          : data?.imageUrls
+          ? data.imageUrls
+          : [data];
+        const uniqueImages = [...new Set([...prev.images, ...newImages])];
+        return {
+          ...prev,
+          images: uniqueImages,
+        };
+      });
     } catch (error) {
-      console.error('Upload error:', error.response?.data || err.message);
+      console.error('Upload error:', error.response?.data || error.message);
       setError('Failed to upload images')
     } finally {
       setUploading(false);
@@ -204,32 +198,58 @@ const handleCategoryChange = (e) => {
 
     const payload = {
       ...form,
-      category: selectedCategory,
-      subcategory: selectedSubCategory,
-      county: selectedCounty,
-      subCounty: selectedSubCounty,
-      ward: selectedWard,
-      location: selectedLocation,
+      price: Number(form.price),
+      images: form.images.flatMap(img => img.imageUrls || img),
+      category: selectedCategory?.trim(),
+      subcategory: selectedSubCategory?.trim(),
+      county: selectedCounty?.trim(),
+      subcounty: selectedSubCounty?.trim(),
     };
+
+    //Validate payload
+    const missingFields = [];
+    if (!payload.name) missingFields.push('name');
+    if (!payload.description) missingFields.push('description');
+    if (isNaN(payload.price) || payload.price <= 0) missingFields.push('price');
+    if (!payload.category) missingFields.push('category');
+    if (!payload.subcategory) missingFields.push('subcategory');
+    if (!payload.county) missingFields.push('county');
+    if (!payload.subcounty) missingFields.push('subcounty');
+
+    if (missingFields.length) {
+      setError(`Please fill in: ${missingFields.join(', ')}`);
+      setLoading(false);
+      return;
+    }
+
+    console.log('Updating adId:', adId);
+    console.log('Payload to send:', JSON.stringify(payload, null, 2));
+    console.log('Token:', token);
 
     try {
       setLoading(true);
       if (adId) {
-        await api.put(`/ads/${adId}`, payload, {
+        const response = await api.put(`/ads/${adId}`, payload, {
           headers: { Authorization: `Bearer ${token}`}
         });
+        console.log('Update response:', response.data);
+        navigate('/dashboard');
       } else {
-        await api.post('/products', payload, {
+        const response = await api.post('/products', payload, {
           headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`, //send token with request
           }
         });
+        console.log('Create response:', response.data)
         //on success redirect home
         navigate('/dashboard');
       } 
     } catch (error) {
-      console.error('Post error:', error.response?.data || error.message);
-      setError('Failed to submit ad.please try again.');
+      console.error('Submit error:', error); // Show the full error
+      console.error('Error response:', error.response?.data); // If API sent a response
+      console.error('Error message:', error.message); // General JS error
+      console.error('Error status:', error.response?.status);
+      setError(error.response?.data?.message || 'Failed to submit ad.please try again.');
     } finally {
       setLoading(false);
     }
@@ -307,10 +327,10 @@ const handleCategoryChange = (e) => {
           </label>
           {uploading && <p>Uploading...</p>}
          <div className="image-preview">
-            {form.images.map(img  => (
-              <div key={img} className="image-wrapper" style={{ position: 'relative', display: 'inline-block', marginRight: '10px' }}>
+            {form.images.map((img, index )  => (
+              <div key={`${img}-${index}`} className="image-wrapper" style={{ position: 'relative', display: 'inline-block', marginRight: '10px' }}>
                 <img
-                  src={`${baseURL}${img}`}
+                  src={`${imageURL}${img}`}
                   alt="Uploaded"
                   style={{ width: '100px', height: 'auto', borderRadius: '4px' }}
                 />
@@ -347,7 +367,7 @@ const handleCategoryChange = (e) => {
             </select>
        </label>
 
-       {selectedCategory && (
+       {selectedCategory && subCategories.length > 0 &&(
         <label>Sub-Category 
           <select value={selectedSubCategory} onChange={e => setSelectedSubCategory(e.target.value)} required>
             <option value="">Select Subcategory</option>
@@ -373,28 +393,7 @@ const handleCategoryChange = (e) => {
             </select>
          </label>
        )}
-       {selectedSubCounty && (
-          <label>Ward
-            <select value={selectedWard} onChange={e=>setSelectedWard(e.target.value)} required>
-              <option value="">Select</option>
-              {renderOptions(wards)}
-            </select>
-          </label>
-      )}
-      {selectedWard && (
-          <label>Location
-            <select value={selectedLocation} onChange={e=>setSelectedLocation(e.target.value)} required>
-              <option value="">Select</option>
-              {renderOptions(locations)}
-            </select>
-          </label>
-      )}  
 
-      <pre style={{ fontSize: '12px', color: 'gray' }}>
-        {JSON.stringify(locations, null, 2)}
-      </pre>
-
-  
         <button type='submit' disabled={loading}>
           {loading ? 'Submitting...' : adId ? 'Update Ad' : 'Post Ad'}
         </button>

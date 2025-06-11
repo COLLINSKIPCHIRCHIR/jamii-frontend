@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import './SearchResults.css'; 
+import api from '../services/api'
+import './SearchResults.css'
+import Footer from './Footer/Footer'; 
 
 const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const imageURL = import.meta.env.VITE_IMAGE_URL;
 
 const SearchResults = () => {
   const [results, setSearchResults] = useState([]);
@@ -44,18 +46,30 @@ const SearchResults = () => {
   const buildImageURL = (img) => {
     if (!img || img.trim() === "") return null;
     if (img.startsWith("http")) return img;
-    if (img.startsWith("/uploads")) return `${baseURL}${img}`;
-    return `${baseURL}/uploads/${img}`;
+    if (img.startsWith("/uploads")) return `${imageURL}${img}`;
+    return `${imageURL}/uploads/${img}`;
   };
 
   return (
     <div className="search-results-container">
       <h2>Search results for "{query}"</h2>
-      {loading && <p>Loading...</p>}
+      {loading && (
+        <div className="skeleton-grid">
+          {Array.from({ length: 8}).map((_, index) => (
+            <div key={index} className="search-card skeleton-card">
+                <div className="skeleton-image" />
+                <div className="skeleton-text title" />
+                <div className="skeleton-text line" />
+            </div>
+        ))}
+        </div>
+      )}
       {error && <p className="error">{error}</p>}
 
       {!loading && results.length === 0 && (
-        <p>No products found.</p>
+        <div className="no-results">
+          <p>No products found matching "<strong>{query}</strong>".</p>
+        </div>
       )}
 
       <div className="search-result-grid">

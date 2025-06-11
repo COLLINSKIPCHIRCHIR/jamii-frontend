@@ -1,6 +1,6 @@
 .homepage {
   padding: 20px;
-  max-width: 1200px;
+  width: 100%;
   margin: auto;
   background-color: var(--bg-page);
   color: var(--text-primary);
@@ -50,4 +50,18 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+/* New responsive content wrapper */
+.container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px;
+}
+
+/*improve padding in mobile*/
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
 }

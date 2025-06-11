@@ -2,7 +2,7 @@ import React, { useEffect, useState} from 'react'
 import './Dashboard.css'
 import { useNavigate } from 'react-router-dom'
 import api from '../services/api'
-const baseURL = import.meta.env.VITE_API_URL
+const imageURL = import.meta.env.VITE_IMAGE_URL
 
 const Dashboard = () => {
   //state to hold the ads fetched from backend
@@ -46,11 +46,11 @@ const Dashboard = () => {
         });
         console.log("Fetched user data:", userResponse.data);
         setUser(userResponse.data);
-        setProfilePic(
-          userResponse.data.profilepic?.trim()
-          ? `/uploads/${userResponse.data.profilepic}`
-          : ''
-        );
+        const profilePicPath = userResponse.data.profilepic?.trim() || '';
+        setProfilePic(profilePicPath);
+        console.log('Dashboard imageURL:', imageURL);
+        console.log('Dashboard profilePic:' , profilePicPath);
+        console.log('Dashboard full URL:', `${imageURL.replace(/\/$/, '')}/${profilePicPath}`);
 
         //Get ads
         const adsResponse = await api.get('ads/mine', {
@@ -230,9 +230,14 @@ const Dashboard = () => {
             className='profile-pic' />
           ) : profilePic ? (
             <img 
-            src={`${baseURL}${profilePic}`} 
+            src={`${imageURL.replace(/\/$/, '')}${profilePic}`} 
             alt={`${user?.name || 'User'}'s profile`}
-            className='profile-pic' />
+            className='profile-pic'
+            onError={(e) => {
+              console.error('Profile pic failed to load:', e.target.src);
+              e.target.src = '/placeholder.jpg';
+            }} 
+            />
           ) : (
             <div className="profile-pic-placeholder">
               {user?.name?.charAt(0).toUpperCase() || 'U'}
@@ -305,7 +310,7 @@ const Dashboard = () => {
                         {ad.images && ad.images[0] && typeof ad.images[0] ===
                         'string' && ad.images[0].trim() !== '' ? ( 
                           <img 
-                            src={`${baseURL}${ad.images[0]}`} 
+                            src={`${imageURL.replace(/\/$/, '')}${ad.images[0]}`} 
                             alt={ad.name}  
                             className='ad-image' 
                             onError={(e) => {

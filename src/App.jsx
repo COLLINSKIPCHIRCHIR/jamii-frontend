@@ -11,14 +11,15 @@ import SearchResults from "./components/SearchResults";
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import Chats from "./pages/Chats";
 import Footer from "./components/Footer/Footer";
+import './App.css';
 
 function App() {
    return (
-<div>
-
 <GoogleOAuthProvider clientId= {import.meta.env.VITE_GOOGLE_CLIENT_ID }>
-    <BrowserRouter>
+  <BrowserRouter>
+  <div className="app-container">
     <Navbar />
+    <main className="main-content">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/product/:id" element={<ProductDetails />} />
@@ -32,11 +33,13 @@ function App() {
         <Route path="/edit-ad/:adId" element={<PostAd />} />
         <Route path="/chats" element={<Chats />} />
       </Routes>
+    </main>
     <Footer />
-    </BrowserRouter>
+  </div>
+  </BrowserRouter>
 </GoogleOAuthProvider>
-    </div>
-  )
+
+  );
 }
 
 export default App

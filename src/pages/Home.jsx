@@ -42,6 +42,7 @@ useEffect(() => {
 
 return (
   <div className="homepage">
+    <div className="container">
     <SearchBar />
     <section className='hero-section'>
         <h1>Welcome to the Buy & Sell Marketplace</h1>
@@ -62,6 +63,7 @@ return (
         </section>
     )}
     </div>
+</div>
 );
 
 

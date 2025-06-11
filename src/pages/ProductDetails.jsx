@@ -3,8 +3,7 @@ import { useParams, useNavigate } from "react-router-dom"
 import api from '../services/api';
 import './productDetails.css'
 const baseURL = import.meta.env.VITE_API_URL;
-
-
+const imageURL = import.meta.env.VITE_IMAGE_URL
 
 
 const ProductDetails = () => {
@@ -128,7 +127,7 @@ const isSeller = currentUser && product?.createdBy && currentUser._id === produc
               ◀
             </button>
             <img
-              src={`${baseURL}${product.images[currentImageIndex]}`}
+              src={`${imageURL}${product.images[currentImageIndex]}`}
               alt="Product"
               className="product-image"
             />
@@ -144,7 +143,7 @@ const isSeller = currentUser && product?.createdBy && currentUser._id === produc
             img && (
             <img
             key={index}
-            src={`${baseURL}${img}`}
+            src={`${imageURL}${img}`}
             alt={`Thumbnail ${index}`}
             className={`thumbnail ${index === currentImageIndex ?
               'active' : ''

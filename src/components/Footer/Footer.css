@@ -9,6 +9,7 @@
   box-shadow: 0 -3px 12px var(--shadow);
   width: 100%;
   box-sizing: border-box;
+  flex-shrink: 0;
 }
 
 /* override the variable only inside the footer for light/dark */

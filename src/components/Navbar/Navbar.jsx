@@ -7,7 +7,7 @@ import api from '../../services/api'
 
 //base URL Axios instance uses
 const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
-
+const imageURL = import.meta.env.VITE_IMAGE_URL
 
 const Navbar = () => {
 
@@ -67,9 +67,7 @@ useEffect(()=> {
                 const token = localStorage.getItem('token');
                 if (!token) return;
 
-                const response = await api.get('/chat/unread/count', {
-                    headers: { Authorization: `Bearer ${token}`},
-                });
+                const response = await api.get('/chat/unread/count');
 
                 setUnreadCount(response.data.unreadCount || 0);
             } catch (err) {
@@ -118,8 +116,8 @@ useEffect(() => {
     const buildImg = (file) => {
         if (!file || file.trim() === "") return null;
         if (file.startsWith("http")) return file;
-        if (file.startsWith("/uploads")) return `${baseURL}${file}`;
-        return `${baseURL}${file}`;
+        if (file.startsWith("/uploads")) return `${imageURL}${file}`;
+        return `${imageURL}${file}`;
     }
 
 

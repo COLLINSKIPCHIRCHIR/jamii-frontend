@@ -124,7 +124,8 @@ function CategoryPage() {
                     _id={item._id}
                     name={item.name}
                     price={item.price}
-                    location={item.location}
+                    county={item.county}
+                    subcounty={item.subcounty}
                     images={item.images}
                   />
                 ))}
